@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baroy Municipality - Official Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    
     <header id="main-header">
         <div class="logo">
             <img src="images/Untitled.png" alt="Baroy Logo">
             <span>Baroy Municipality</span>
         </div>
-        <nav class="main-nav">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="main-nav" id="primary-navigation" role="navigation">
             <ul class="nav-list">
                 <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
@@ -27,7 +32,10 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Welcome to Baroy</h1>
-            <p>A progressive municipality committed to sustainable development and excellent public service.</p>
+            <p>A progressive municipality committed to sustainable development and excellent public service.
+                We strive to create a thriving, inclusive community where everyone can succeed. 
+                Through innovation and collaboration, we build a better future for generations to come.
+            </p>
             <div class="hero-buttons">
                 <a href="#services" class="btn">Explore Services</a>
                 <a href="#contact" class="btn btn-outline">Contact Us</a>
@@ -44,7 +52,7 @@
                 <p>Our vision is to make Baroy a model municipality in terms of sustainable development, good governance, and community empowerment.</p>
             </div>
             <div class="about-image">
-                <img src="images/2024-01-22-BAROY-SHOWCASES-GINI-AKAN-FESTIVAL.jpg" alt="Baroy Landscape">
+                <video src="images/baroy.mp4" alt="Baroy Video" autoplay muted loop playsinline style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);"></video>
             </div>
         </div>
     </section>
@@ -54,31 +62,55 @@
         <div class="barangay-grid">
             <div class="barangay-card">
                 <img src="images/image12.webp" alt="Barangay Image">
-                <div class="barangay-info">
-                    <h3>Barangay Poblacion</h3>
+                <div class="barangay-info" onclick="openModal('Poblacion', 'The center of Baroy with the municipal hall and markets.')">
+                    <h3>Poblacion</h3>
                     <p>The town center and seat of the municipal government. Home to the municipal hall, public market, and main commercial area.</p>
                 </div>
             </div>
             <div class="barangay-card">
                 <img src="images/board walk san juan.jpg" alt="Barangay Image">
-                <div class="barangay-info">
-                    <h3>Barangay San Juan</h3>
+                <div class="barangay-info" onclick="openModal('San Juan', 'A coastal barangay with beautiful beach views and fresh seafood.')">
+                    <h3>San Juan</h3>
                     <p>A coastal barangay with fishing as the main livelihood. Offers beautiful beach views and fresh seafood.</p>
                 </div>
             </div>
             <div class="barangay-card">
-                <img src="images/daleyma.avif" alt="Barangay Image">
-                <div class="barangay-info">
-                    <h3>Barangay Dalama</h3>
+                <img src="images/dalamass.jpg" alt="Barangay Image">
+                <div class="barangay-info"  onclick="openModal('Dalama', 'Agricultural lands producing rice, corn, and fruits.')">
+                    <h3>Dalama</h3>
                     <p>Known for its agricultural lands producing rice, corn, and various fruits. Features beautiful rural landscapes.</p>
                 </div>
             </div>
-        </div>
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="#" class="btn">View All Barangays</a>
+            <div class="barangay-card">
+                <img src="images/village.jpg" alt="Barangay Image">
+                <div class="barangay-info" onclick="openModal('Daleyma', 'A peaceful barangay known for its community events and local crafts.')">
+                    <h3>Village</h3>
+                    <p>A residential barangay near the town center. Known for its growing community and accessibility to schools and local facilities.</p>
+                </div>
+            </div>
+            <div class="barangay-card">
+                <img src="images/pange.jpg" alt="Barangay Image">
+                <div class="barangay-info" onclick="openModal('Dalipuga', 'A vibrant barangay with a mix of agricultural and commercial activities.')">
+                    <h3>Pange</h3>
+                    <p>A rural barangay with a peaceful environment. Mostly agricultural, with wide open spaces and a strong sense of community.</p>
+                </div>
+            </div>
+            <div class="barangay-card">
+                <img src="images/baroy daku.jpg" alt="Barangay Image">
+                <div class="barangay-info" onclick="openModal('New Barangay', 'A coastal barangay with fishing as a key livelihood')">
+                    <h3>Baroy Daku</h3>
+                    <p>A coastal barangay with fishing as a key livelihood. Features scenic views and a close-knit fishing community.</p>
+                </div>
+            </div>
         </div>
     </section>
-
+    <div class="barangay-modal" id="barangayModal">
+        <div class="barangay-modal-content">
+          <span class="close-modal" onclick="closeModal()">&times;</span>
+          <h2 id="barangayTitle"></h2>
+          <p id="barangayDesc"></p>
+        </div>
+      </div>
     <section id="services">
         <h2 class="section-title">Services</h2>
         <div class="service-cards">
@@ -97,6 +129,21 @@
                 <h3>Clearances</h3>
                 <p>Obtain barangay clearances, police clearances, and other certifications.</p>
             </div>
+            <div class="service-card">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Public Announcements</h3>
+                <p>Stay informed with the latest public announcements and community updates.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tree"></i>
+                <h3>Environmental Programs</h3>
+                <p>Participate in local environmental initiatives and sustainability programs.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-book"></i>
+                <h3>Educational Support</h3>
+                <p>Access resources and assistance for educational development and scholarships.</p>
+            </div>
         </div>
     </section>
 
@@ -106,9 +153,12 @@
             <div class="news-card">
                 <img src="images/terminalll.jpg" alt="News Image">
                 <div class="news-content">
-                    <div class="news-date">April 11, 2025</div>
+                    <div class="news-date">May 3, 2025</div>
                     <h3>New Baroy Terminal</h3>
-                    <p>The groundbreaking ceremony for the new bus terminal was held today.</p>
+                    <p>The groundbreaking ceremony for the new bus terminal was held today.
+                        Local officials, community leaders, and residents gathered to celebrate the start of the much-anticipated project, 
+                        which promises to improve transportation services and boost the local economy.
+                    </p>
                     <a href="#" class="btn">Read More</a>
                 </div>
             </div>
@@ -117,14 +167,16 @@
                 <div class="news-content">
                     <div class="news-date">January 18, 2025</div>
                     <h3>Baroy Celebrates Annual Festival</h3>
-                    <p>The town celebrated its annual festival with street dancing, cultural shows, and food fairs.</p>
+                    <p>The town celebrated its annual festival with street dancing, cultural shows, and food fairs.
+                        The streets were filled with colorful costumes, and the air was lively with music and laughter. 
+                    </p>
                     <a href="#" class="btn">Read More</a>
                 </div>
             </div>
             <div class="news-card">
                 <img src="images/wwww.webp" alt="News Image">
                 <div class="news-content">
-                    <div class="news-date">June 13, 2023</div>
+                    <div class="news-date">February 28, 2021</div>
                     <h3>Baroy Public Market</h3>
                     <p>Baroy public market continues to thrive as a bustling hub for local trade, offering fresh produce and goods to residents and visitors alike.</p>
                     <a href="#" class="btn">Read More</a>
@@ -144,7 +196,7 @@
             <div class="contact-item">
                 <i class="fas fa-phone"></i>
                 <h3>Phone</h3>
-                <p>(01) 234 - 456 - 69</p>
+                <p>0960-475-7521</p>
             </div>
             <div class="contact-item">
                 <i class="fas fa-envelope"></i>
