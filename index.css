@@ -1036,7 +1036,7 @@ footer {
 }
 
 .footer-column {
-    text-align: center;
+    text-align: left;
     margin-bottom: 2rem;
 }
 
@@ -1097,14 +1097,16 @@ footer {
 
 .footer-column ul {
     list-style: none;
-    text-align: center;
+    text-align: left;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .footer-column ul li {
     margin-bottom: 0.8rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .footer-column ul li i {
@@ -1656,6 +1658,21 @@ footer {
 
     .event-date {
         margin: 0 auto;
+    }
+
+    /* Fix hero section height on mobile for text visibility */
+    .hero {
+        height: auto !important;
+        min-height: 60vh;
+        padding: 4rem 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
     }
 }
 
