@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Baroy Municipality - Official Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    
-    <header id="main-header">
+    <header id="main-header" role="banner">
         <div class="logo">
-            <img src="images/Untitled.png" alt="Baroy Logo">
+            <img src="images/Untitled.png" alt="Baroy Logo" />
             <span>Baroy Municipality</span>
         </div>
         <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
             <span class="hamburger"></span>
         </button>
-        <nav class="main-nav" id="primary-navigation" role="navigation">
+        <nav class="main-nav" id="primary-navigation" role="navigation" aria-label="Primary Navigation">
             <ul class="nav-list">
-                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#barangays" class="nav-link">Barangays</a></li>
-                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="#news" class="nav-link">News</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#home" class="nav-link active" tabindex="0">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link" tabindex="0">About</a></li>
+                <li class="nav-item"><a href="#barangays" class="nav-link" tabindex="0">Barangays</a></li>
+                <li class="nav-item"><a href="#tourist-spots" class="nav-link" tabindex="0">Where to go</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link" tabindex="0">Services</a></li>
+                <li class="nav-item"><a href="#news" class="nav-link" tabindex="0">News</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link" tabindex="0">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -40,6 +40,23 @@
                 <a href="#services" class="btn">Explore Services</a>
                 <a href="#contact" class="btn btn-outline">Contact Us</a>
             </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <h3>24,683</h3>
+                    <p>Population</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>23</h3>
+                    <p>Barangays</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-building"></i>
+                    <h3>4th</h3>
+                    <p>Class Municipality</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -50,15 +67,60 @@
                 <p>Baroy is a 4th class municipality in the province of Lanao del Norte, Philippines. According to the 2020 census, it has a population of 24,683 people.</p>
                 <p>The municipality is known for its rich agricultural lands, beautiful landscapes, and warm, hospitable people. Baroy is composed of 23 barangays, each with its own unique character and charm.</p>
                 <p>Our vision is to make Baroy a model municipality in terms of sustainable development, good governance, and community empowerment.</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-leaf"></i>
+                        <h4>Sustainable Development</h4>
+                        <p>Committed to environmental protection</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Good Governance</h4>
+                        <p>Transparent and accountable leadership</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <h4>Community First</h4>
+                        <p>People-centered development</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-building"></i>
+                        <h4>New Infrastructure</h4>
+                        <p>Building facilities for community growth</p>
+                    </div>
+                </div>
             </div>
             <div class="about-image">
-                <video src="images/baroy.mp4" alt="Baroy Video" autoplay muted loop playsinline style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);"></video>
+                <video src="images/baroy.mp4" alt="Baroy Video" autoplay muted loop playsinline></video>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-info">
+        <div class="info-container">
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <h3>Office Hours</h3>
+                <p>Monday - Friday</p>
+                <p>8:00 AM - 5:00 PM</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Emergency Hotline</h3>
+                <p>24/7 Available</p>
+                <p>0956-180-0145</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-calendar-check"></i>
+                <h3>Next Event</h3>
+                <p>Araw ng Baroy</p>
+                <p>June 10, 2025</p>
             </div>
         </div>
     </section>
 
     <section class="barangays" id="barangays">
-        <h2 class="section-title">Our Barangays</h2>
+        <h2 class="section-title">Featured barangays</h2>
         <div class="barangay-grid">
             <div class="barangay-card">
                 <img src="images/image12.webp" alt="Barangay Image">
@@ -83,7 +145,7 @@
             </div>
             <div class="barangay-card">
                 <img src="images/village.jpg" alt="Barangay Image">
-                <div class="barangay-info" onclick="openModal('Daleyma', 'A peaceful barangay known for its community events and local crafts.')">
+                <div class="barangay-info" onclick="openModal('Village', 'A peaceful barangay known for its community events and local crafts.')">
                     <h3>Village</h3>
                     <p>A residential barangay near the town center. Known for its growing community and accessibility to schools and local facilities.</p>
                 </div>
@@ -97,20 +159,62 @@
             </div>
             <div class="barangay-card">
                 <img src="images/baroy daku.jpg" alt="Barangay Image">
-                <div class="barangay-info" onclick="openModal('New Barangay', 'A coastal barangay with fishing as a key livelihood')">
+                <div class="barangay-info" onclick="openModal('Baroy Daku', 'A coastal barangay with fishing as a key livelihood')">
                     <h3>Baroy Daku</h3>
                     <p>A coastal barangay with fishing as a key livelihood. Features scenic views and a close-knit fishing community.</p>
                 </div>
             </div>
         </div>
     </section>
-    <div class="barangay-modal" id="barangayModal">
-        <div class="barangay-modal-content">
-          <span class="close-modal" onclick="closeModal()">&times;</span>
-          <h2 id="barangayTitle"></h2>
-          <p id="barangayDesc"></p>
+
+    <section id="achievements" class="achievements">
+        <h2 class="section-title">Our Achievements</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <i class="fas fa-trophy"></i>
+                <h3>Focus on Local Economy</h3>
+                <p>2023 Provincial Award</p>
+            </div>
+            <div class="achievement-card">
+                <i class="fas fa-star"></i>
+                <h3>Agricultural Support</h3>
+                <p>Provincial Recognition</p>
+            </div>
+            <div class="achievement-card">
+                <i class="fas fa-award"></i>
+                <h3>Winning at the Gini-akan Festival</h3>
+                <p>2024 Municipal Award</p>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <section id="tourist-spots">
+        <h2 class="section-title">Where to go</h2>
+        <div class="barangay-grid">
+            <div class="barangay-card">
+                <video src="images/antoniooo.mp4" alt="Antonio" autoplay muted loop playsinline style="width: 100%; height: 170px; object-fit: cover; border-bottom-left-radius: var(--border-radius); border-bottom-right-radius: var(--border-radius);"></video>
+                <div class="barangay-info">
+                    <h3>Antonio Mountain Resort</h3>
+                    <p>a peaceful mountain resort offering scenic views, fresh air, and relaxing cottages—perfect for family getaways and nature lovers.</p>
+                </div>
+            </div>
+            <div class="barangay-card">
+                <video src="images/andil.mp4" alt="andil" autoplay muted loop playsinline style="width: 100%; height: 170px; object-fit: cover; border-bottom-left-radius: var(--border-radius); border-bottom-right-radius: var(--border-radius);"></video>
+                <div class="barangay-info">
+                    <h3>Tagaytay in Baroy</h3>
+                    <p>a popular local spot known for its cool breeze and panoramic views, often visited for picnics, sightseeing, and quick nature escapes.</p>
+                </div>
+            </div>
+            <div class="barangay-card">
+                <video src="images/alrissa.mp4" alt="alrissa" autoplay muted loop playsinline style="width: 100%; height: 170px; object-fit: cover; border-bottom-left-radius: var(--border-radius); border-bottom-right-radius: var(--border-radius);"></video>
+                <div class="barangay-info">
+                    <h3>Alrissa Resort</h3>
+                    <p>a private and cozy venue ideal for events and small gatherings, offering a serene environment with a touch of elegance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="services">
         <h2 class="section-title">Services</h2>
         <div class="service-cards">
@@ -153,13 +257,13 @@
             <div class="news-card">
                 <img src="images/terminalll.jpg" alt="News Image">
                 <div class="news-content">
-                    <div class="news-date">May 3, 2025</div>
+                    <div class="news-date">May 3, 2025</div> 
                     <h3>New Baroy Terminal</h3>
                     <p>The groundbreaking ceremony for the new bus terminal was held today.
                         Local officials, community leaders, and residents gathered to celebrate the start of the much-anticipated project, 
                         which promises to improve transportation services and boost the local economy.
                     </p>
-                    <a href="#" class="btn">Read More</a>
+                    <button class="btn read-more-btn" onclick="openModal('New Baroy Terminal', 'The groundbreaking ceremony for the new bus terminal was held today. Local officials, community leaders, and residents gathered to celebrate the start of the much-anticipated project, which promises to improve transportation services and boost the local economy.')">Read More</button>
                 </div>
             </div>
             <div class="news-card">
@@ -170,7 +274,7 @@
                     <p>The town celebrated its annual festival with street dancing, cultural shows, and food fairs.
                         The streets were filled with colorful costumes, and the air was lively with music and laughter. 
                     </p>
-                    <a href="#" class="btn">Read More</a>
+                    <button class="btn read-more-btn" onclick="openModal('Baroy Celebrates Annual Festival', 'The town celebrated its annual festival with street dancing, cultural shows, and food fairs. The streets were filled with colorful costumes, and the air was lively with music and laughter.')">Read More</button>
                 </div>
             </div>
             <div class="news-card">
@@ -179,7 +283,7 @@
                     <div class="news-date">February 28, 2021</div>
                     <h3>Baroy Public Market</h3>
                     <p>Baroy public market continues to thrive as a bustling hub for local trade, offering fresh produce and goods to residents and visitors alike.</p>
-                    <a href="#" class="btn">Read More</a>
+                    <button class="btn read-more-btn" onclick="openModal('Baroy Public Market', 'Baroy public market continues to thrive as a bustling hub for local trade, offering fresh produce and goods to residents and visitors alike.')">Read More</button>
                 </div>
             </div>
         </div>
@@ -196,7 +300,7 @@
             <div class="contact-item">
                 <i class="fas fa-phone"></i>
                 <h3>Phone</h3>
-                <p>0960-475-7521</p>
+                <p>(063) 227-7192</p>
             </div>
             <div class="contact-item">
                 <i class="fas fa-envelope"></i>
@@ -228,6 +332,42 @@
         </div>
     </section>
 
+    <section class="upcoming-events">
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="events-timeline">
+            <div class="event-item">
+                <div class="event-date">
+                    <span class="month">JUN</span>
+                    <span class="day">10</span>
+                </div>
+                <div class="event-content">
+                    <h3>Araw ng Baroy 2025</h3>
+                    <p>Annual celebration of culture and arts</p>
+                </div>
+            </div>
+            <div class="event-item">
+                <div class="event-date">
+                    <span class="month">JUL</span>
+                    <span class="day">01</span>
+                </div>
+                <div class="event-content">
+                    <h3>Agricultural Fair</h3>
+                    <p>Showcasing local produce and farming innovation</p>
+                </div>
+            </div>
+            <div class="event-item">
+                <div class="event-date">
+                    <span class="month">AUG</span>
+                    <span class="day">12</span>
+                </div>
+                <div class="event-content">
+                    <h3>Youth Summit</h3>
+                    <p>Empowering the next generation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-content">
             <div class="footer-column">
@@ -246,6 +386,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#barangays">Barangays</a></li>
+                    <li><a href="#tourist-spots">Where to go</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#news">News</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -255,7 +396,7 @@
                 <h3>Contact</h3>
                 <ul>
                     <li><i class="fas fa-map-marker-alt"></i> Municipal Hall, Poblacion</li>
-                    <li><i class="fas fa-phone"></i> 0960 475 7521</li>
+                    <li><i class="fas fa-phone"></i> (063) 227-7192</li>
                     <li><i class="fas fa-envelope"></i> contactus@baroy.gov.ph</li>
                 </ul>
             </div>
@@ -264,6 +405,13 @@
             <p>&copy; 2025 Municipality of Baroy. All Rights Reserved.</p>
         </div>
     </footer>
+    <div id="barangayModal" class="barangay-modal" role="dialog" aria-modal="true" aria-labelledby="barangayTitle" aria-describedby="barangayDesc">
+        <div class="barangay-modal-content">
+            <button class="close-modal" aria-label="Close modal" onclick="window.closeModal()">&times;</button>
+            <h2 id="barangayTitle"></h2>
+            <p id="barangayDesc"></p>
+        </div>
+    </div>
 </body>
 </html>
 <script src="index.js"></script>
